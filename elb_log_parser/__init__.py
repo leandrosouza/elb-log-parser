@@ -48,7 +48,7 @@ def parse_line(log_line):
     response = Response()
     
     response.timestamp = datetime.strptime('%s %s' % (log_line[0].split("T")[0], log_line[0].split("T")[1].split(".")[0]),'%Y-%m-%d %H:%M:%S')
-    response.elb_elb = log_line[1]
+    response.elb_name = log_line[1]
     response.elb_client_ip = log_line[2].split(":")[0]
     if log_line[3] != "-":
         response.elb_backend_ip = log_line[3].split(":")[0]
@@ -56,7 +56,7 @@ def parse_line(log_line):
     response.elb_request_processing_time = float(log_line[4])
     response.elb_backend_processing_time = float(log_line[5])
     response.elb_response_processing_time = float(log_line[6])
-    response.elb_elb_status_code = int(log_line[7])
+    response.elb_status_code = int(log_line[7])
     response.elb_backend_status_code = int(log_line[8])
     response.elb_received_bytes = int(log_line[9])
     response.elb_sent_bytes = int(log_line[10])
@@ -95,7 +95,7 @@ def parse_user_agent(response, user_agent_str):
 class Response:
     def __init__(self):
         self.timestamp = None
-        self.elb_elb = None
+        self.elb_name = None
         self.elb_client_ip = None
         self.elb_backend_ip = None
         self.elb_backend_port = None
