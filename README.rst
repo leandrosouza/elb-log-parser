@@ -1,15 +1,19 @@
-# elb-log-parser
+****************************************
+elb-log-parser
+****************************************
 
 AWS Elastic Load Balancing log parser
 
-## Installing
+Installing
+===============
 
     $ pip install elb-log-parser
 
-## Usage
+Usage
+===============
 
-
-## Licensing
+Licensing
+===============
 
 The MIT License (MIT)
 
