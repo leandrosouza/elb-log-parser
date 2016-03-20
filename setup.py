@@ -49,5 +49,14 @@ AWS Elastic Load Balancing log parser.
     install_requires=[
         'six>=1.9.0,<2.0.0',
         'user-agents>=1.0.0,<2.0.0',
-    ]
+    ],
+    extras_require={
+        'tests': tests_require,
+    },
+    entry_points={
+        'console_scripts': [
+            # add cli scripts here in this form:
+            # 'elb-log-parser=elb_log_parser.cli:main',
+        ],
+    },
 )
