@@ -8,4 +8,4 @@
 # http://www.opensource.org/licenses/MIT-license
 # Copyright (c) 2016, Leandro Souza <lsouzarj@gmail.com>
 
-__version__ = '0.0.1'  # NOQA
+__version__ = '0.0.2'  # NOQA
