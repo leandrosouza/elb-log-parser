@@ -7,6 +7,8 @@ AWS Elastic Load Balancing log parser
 Installing
 ===============
 
+.. code-block:: bash
+
     $ pip install elb-log-parser
 
 Usage
