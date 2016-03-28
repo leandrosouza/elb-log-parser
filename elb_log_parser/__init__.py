@@ -56,8 +56,10 @@ def parse_line(log_line):
     response.elb_request_processing_time = float(log_line[4])
     response.elb_backend_processing_time = float(log_line[5])
     response.elb_response_processing_time = float(log_line[6])
-    response.elb_status_code = int(log_line[7])
-    response.elb_backend_status_code = int(log_line[8])
+    if log_line[7] != "-":
+        response.elb_status_code = int(log_line[7])
+    if log_line[8] != "-":
+        response.elb_backend_status_code = int(log_line[8])
     response.elb_received_bytes = int(log_line[9])
     response.elb_sent_bytes = int(log_line[10])
     response.elb_http_method = log_line[11].split(" ")[0]
