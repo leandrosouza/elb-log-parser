@@ -11,7 +11,10 @@
 import csv
 from datetime import datetime
 import logging
-import urlparse
+try:
+    import urlparse
+except:
+    from urllib.parse import urlparse
 
 try:
     from cStringIO import StringIO
