@@ -13,7 +13,7 @@ from datetime import datetime
 import logging
 try:
     import urlparse
-except:
+except ImportError:
     from urllib.parse import urlparse
 
 try:
